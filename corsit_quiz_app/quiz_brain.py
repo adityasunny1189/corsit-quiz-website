@@ -9,6 +9,8 @@ class QuizBrain:
         self.question_list = question_bank
 
     def next_question(self):
+        if self.question_number == 0:
+            self.score = 0
         self.current_question = self.question_list[self.question_number]
         self.question_number += 1
         q_text = html.unescape(self.current_question.question)
@@ -23,6 +25,5 @@ class QuizBrain:
         return self.question_number < len(self.question_list)
 
     def reset(self):
-        self.score = 0
         self.current_question = None
         self.question_number = 0

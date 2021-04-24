@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <header>
+        <h1>Score: {{ score }}</h1>
+        <div class="question">
+            <h2> {{ question }} </h2>
+            <a href=" {{ url_for('check_answer', user_ans=True) }} "><button class="true">True</button></a>
+            <a href=" {{ url_for('check_answer', user_ans=False) }} "><button class="false">False</button></a>
+        </div>
+    </header>
+</body>
+</html>
